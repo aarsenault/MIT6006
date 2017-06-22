@@ -1,0 +1,37 @@
+
+$ Lecture 2: https://www.youtube.com/watch?v=Zc54gFhdpLA&index=2&list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb
+
+
+1) Random Access Machine (RAM) 
+	O(1)
+
+
+# Constant time, O(1): 
+
+	Perhaps a good way to tell if something is constant time or not is to ask yourself does the time required to do this (even if it takes a lot of time) change based on how many “things” you have. 
+
+So for instance, finding a single value in an array takes 0(1) no matter what position, or how big the array because you are just moving to a memory address. For a list this is not the case because you have to scan through the whole list. 
+
+
+
+# interesting time complexities:
+
+	* len(arr) = O(1), constant because arrays are stored with this info about their length
+
+	* dict lookup = O(1) (AKA HASH TABLE) 
+		- anything dealing with a single dict key is constant time
+		- randomized algorithm that does O(1) W.H.P (with high probability 
+
+
+
+# Model of computation ? 
+
+
+# count dictionaries: ?
+
+
+# ∑(l_word) = l_doc
+	i.e the sum of the length of the words is the length of the document
+
+
+# Divide and conquer done in logarithmic time ( O(log(n) )
