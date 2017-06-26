@@ -6,7 +6,7 @@
 #
 # Usage:
 #    docdist5.py filename1 filename2
-#     
+#
 # This program computes the "distance" between two text files
 # as the angle between their word frequency vectors (in radians).
 #
@@ -37,7 +37,7 @@ import string
 import sys
 
 def read_file(filename):
-    """ 
+    """
     Read the text file with the given filename;
     return a list of the lines of text in the file.
     """
@@ -71,7 +71,7 @@ def get_words_from_string(line):
     converting each word to lower-case.
 
     Input:  line (a string)
-    Output: a list of strings 
+    Output: a list of strings
               (each string is a sequence of alphanumeric characters)
     """
     line = line.translate(translation_table)
@@ -96,7 +96,7 @@ def insertion_sort(A):
 
     From Cormen/Leiserson/Rivest/Stein,
     Introduction to Algorithms (second edition), page 17,
-    modified to adjust for fact that Python arrays use 
+    modified to adjust for fact that Python arrays use
     0-indexing.
     """
     for j in range(len(A)):
@@ -108,10 +108,10 @@ def insertion_sort(A):
             i = i-1
         A[i+1] = key
     return A
-    
+
 def word_frequencies_for_file(filename):
     """
-    Return alphabetically sorted list of (word,frequency) pairs 
+    Return alphabetically sorted list of (word,frequency) pairs
     for the given file.
     """
     line_list = read_file(filename)
@@ -126,7 +126,7 @@ def inner_product(L1,L2):
     are represented as alphabetically sorted (word,freq) pairs.
 
     Example: inner_product([["and",3],["of",2],["the",5]],
-                           [["and",4],["in",1],["of",1],["this",2]]) = 14.0 
+                           [["and",4],["in",1],["of",1],["this",2]]) = 14.0
     """
     sum = 0.0
     i = 0
@@ -169,4 +169,4 @@ def main():
 
 if __name__ == "__main__":
     import cProfile
-    cProfile.run("main()")
+    cProfile.run("main()", sort="time")

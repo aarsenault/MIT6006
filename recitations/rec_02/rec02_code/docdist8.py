@@ -6,7 +6,7 @@
 #
 # Usage:
 #    docdist8.py filename1 filename2
-#     
+#
 # This program computes the "distance" between two text files
 # as the angle between their word frequency vectors (in radians).
 #
@@ -37,7 +37,7 @@ import string
 import sys
 
 def read_file(filename):
-    """ 
+    """
     Read the text file with the given filename;
     return a list of the lines of text in the file.
     """
@@ -89,7 +89,7 @@ def inner_product(D1,D2):
     are represented as dictionaries of (word,freq) pairs.
 
     Example: inner_product({"and":3,"of":2,"the":5},
-                           {"and":4,"in":1,"of":1,"this":2}) = 14.0 
+                           {"and":4,"in":1,"of":1,"this":2}) = 14.0
     """
     sum = 0.0
     for key in D1:
@@ -120,4 +120,4 @@ def main():
 
 if __name__ == "__main__":
     import cProfile
-    cProfile.run("main()")
+    cProfile.run("main()", sort="cumtime")
